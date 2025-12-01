@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leoanard D. Mori Portfolio </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1d6773f856.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <img src="images/logo.png" class="logo">
+          <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fa-solid fa-ellipsis-vertical" onclick="openmenu()"></i>  
+        </nav>
+        <div class="header-text">
+          <p>A Programmer</p>
+          <h1 class="text-type">
+            <span id="typing-text" class="text-type__content"></span>
+            <span id="typing-cursor" class="text-type__cursor">_</span>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!------------ About Section ------------>
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <div class="electric-border">
+              <svg class="eb-svg" aria-hidden="true" focusable="false">
+                <defs>
+                  <filter id="turbulent-displace-static" color-interpolation-filters="sRGB" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="1" />
+                    <feOffset in="noise1" dx="0" dy="0" result="offsetNoise1">
+                      <animate attributeName="dy" values="700; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="1" />
+                    <feOffset in="noise2" dx="0" dy="0" result="offsetNoise2">
+                      <animate attributeName="dy" values="0; -700" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise1" seed="2" />
+                    <feOffset in="noise1" dx="0" dy="0" result="offsetNoise3">
+                      <animate attributeName="dx" values="490; 0" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="10" result="noise2" seed="2" />
+                    <feOffset in="noise2" dx="0" dy="0" result="offsetNoise4">
+                      <animate attributeName="dx" values="0; -490" dur="6s" repeatCount="indefinite" calcMode="linear" />
+                    </feOffset>
+
+                    <feComposite in="offsetNoise1" in2="offsetNoise2" result="part1" />
+                    <feComposite in="offsetNoise3" in2="offsetNoise4" result="part2" />
+                    <feBlend in="part1" in2="part2" mode="color-dodge" result="combinedNoise" />
+                    <feDisplacementMap
+                      in="SourceGraphic"
+                      in2="combinedNoise"
+                      scale="30"
+                      xChannelSelector="R"
+                      yChannelSelector="B"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+
+              <div class="eb-layers">
+                <div class="eb-stroke"></div>
+                <div class="eb-glow-1"></div>
+                <div class="eb-glow-2"></div>
+                <div class="eb-background-glow"></div>
+              </div>
+
+              <div class="eb-content">
+                <img src="images/user.png" alt="Leonard profile picture">
+              </div>
+            </div>
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p>I am Leonard D. Mori, a dedicated and adaptable Information 
+            Technology student with hands-on experience in both healthcare 
+            support and IT services. Through my internships, I developed 
+            valuable skills in technical troubleshooting, website management. 
+            I am a quick learner and a team player who has a strong 
+            foundation in teamwork, problem-solving, and communication. 
+            With an internship experience, I am eager to further apply my 
+            knowledge and grow as a professional in the IT industry.</p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+              <p class="tab-links" onclick="opentab('experience')">Experience</p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>Basic HTML & CSS</span><br>Capable of building simple web pages with basic styling.</li>
+                <li><span>Introductory JavaScript</span><br>Learning how to add simple interactivity to websites.</li>
+                <li><span>Responsive Web Design (beginner)</span><br>Understanding how to make layouts adapt to different screen sizes.</li>
+                <li><span>Basic Git & GitHub</span><br>Able to use Git and GitHub for collaboration.</li>
+                <li><span>Computer Troubleshooting</span><br>Can diagnose and fix common software and hardware issues.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>Assistant Intern Barangay Health Center</span><br>Assisted patients with basic healthcare needs, and maintained records using Microsoft Excel.</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span>2011 - 2018</span><br>Elementary student form Tisa II Elementary School</li>
+                <li><span>2018 - 2024</span><br>High School student form Tisa National High School</li>
+                <li><span>2024 - 2026</span><br>BSIT student form Cebu Technological University</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!------------ Services Section ------------>
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>Creating visually appealing and user-friendly websites using HTML, CSS, and JavaScript.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-pen-ruler"></i>
+            <h2>Vector Design</h2>
+            <p>Creating designs using Canva, Adobe Illustrator, and Adobe Photoshop.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-video"></i>
+            <h2>Video Editing</h2>
+            <p>Editing and creating videos using Capcut and Adobe After Effects.</p>
+            <a href="#">Learn more</a>
+          </div>  
+        </div>
+      </div>
+    </div>
+
+    <!------------ Portfolio Section ------------>
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png">
+            <div class="layer">
+              <h3>Coding</h3>
+              <p>This is one of my coding projects.</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png">
+            <div class="layer">
+              <h3>Vector Design</h3>
+              <p>This is one of my Vector design project.</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png">
+            <div class="layer">
+              <h3>Video Editing</h3>
+              <p>This is my youtube channel where I post my edited videos.</p>
+              <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn" id="see-more-btn">See more</a>
+        <a href="WebPageMori/MyWeb.html" class="btn" id="extra-project-btn" target="_blank" rel="noopener noreferrer">
+          Open my new WebPage
+        </a>
+      </div>
+    </div>
+
+    <!------------ Contact Section ------------>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa-solid fa-paper-plane"></i>leonardmori69@gmail.com</p>
+            <p><i class="fa-solid fa-square-phone"></i>09696504660</p>
+            <div class="social-icons">
+              <a href="https://www.facebook.com/leo.mori.125/"><i class="fa-brands fa-facebook"></i></a>
+              <a href="https://www.youtube.com/@MoriskiGAMINGChannel"><i class="fa-brands fa-youtube"></i></a>
+              <a href="https://steamcommunity.com/profiles/76561199559077883/"><i class="fa-brands fa-steam"></i></i></i></a>
+              <a href="https://discord.gg/jRBMaSWA4b"><i class="fa-brands fa-discord"></i></i></a>
+            </div>
+            <a href="images/MoriResume.docx.pdf" download class="btn btn2">Download Resume</a>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your Name" required>
+              <input type="email" name="Email" placeholder="Your Email" required>
+              <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright <i class="fa-regular fa-copyright"></i> Leonard D. Mori</p>
+      </div>
+    </div>
+    <button class="btn" id="flashbang-btn" onclick="flash()">
+      Flashbang
+    </button>
+    <div class="flashbang" id="fb"></div>
+    <div class="shockwave" id="ring"></div>
+    <audio id="flash-sound" preload="auto">
+      <source src="sounds/flashbang.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+      function flash() {
+        const f = document.getElementById('fb');
+        const r = document.getElementById('ring');
+        const audio = document.getElementById('flash-sound');
+      
+        f.style.animation = "none";
+        void f.offsetWidth;
+        f.style.animation = "flashbang 8s ease-out forwards";
+      
+        r.style.animation = "none";
+        void r.offsetWidth;
+        r.style.animation = "shockwave-pulse 1.5s ease-out forwards";
+
+        audio.load();  
+        audio.volume = 1.0;
+        audio.currentTime = 0;
+        audio.play().catch(err => console.log(err));
+      }
+      </script>
+      
+      
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname){
+        for(tablink of tablinks){
+          tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script>
+      var sidemenu = document.getElementById("sidemenu");
+
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+
+      const seeMoreBtn = document.getElementById("see-more-btn");
+      const extraProjectBtn = document.getElementById("extra-project-btn");
+      if (seeMoreBtn && extraProjectBtn) {
+        seeMoreBtn.addEventListener("click", function(event){
+          event.preventDefault();
+          extraProjectBtn.style.display = "block";
+          this.style.display = "none";
+        });
+      }
+    </script>
+
+    <script>
+      (function(){
+        const texts = [
+          "Hi, I'm Leonard Mori",
+          "From Cebu City, Philippines"
+        ];
+
+        const typingSpeed = 75;
+        const deletingSpeed = 40;
+        const pauseDuration = 1500;
+        const loop = true;
+
+        const textEl = document.getElementById("typing-text");
+        const cursorEl = document.getElementById("typing-cursor");
+
+        if (!textEl) return;
+
+        let currentTextIndex = 0;
+        let currentCharIndex = 0;
+        let isDeleting = false;
+
+        function tick(){
+          const fullText = texts[currentTextIndex];
+
+          if (isDeleting) {
+            textEl.textContent = fullText.substring(0, currentCharIndex - 1);
+            currentCharIndex--;
+
+            if (currentCharIndex === 0) {
+              isDeleting = false;
+              currentTextIndex = (currentTextIndex + 1) % texts.length;
+              if (!loop && currentTextIndex === 0) return;
+              setTimeout(tick, typingSpeed);
+              return;
+            }
+
+            setTimeout(tick, deletingSpeed);
+          } else {
+            textEl.textContent = fullText.substring(0, currentCharIndex + 1);
+            currentCharIndex++;
+
+            if (currentCharIndex === fullText.length) {
+              setTimeout(() => {
+                isDeleting = true;
+                setTimeout(tick, deletingSpeed);
+              }, pauseDuration);
+              return;
+            }
+
+            setTimeout(tick, typingSpeed);
+          }
+        }
+
+        setTimeout(tick, 300);
+      })();
+    </script>
+
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbxM-q_LQRL2zaOOtcTXvlUa4_pEHEQEB46fDasG_ouZRSKABoimHG2-quik2bSCVMwHXg/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Message Sent Successfully"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            }, 5000)
+            form.reset()
+          })
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+  </body>
+</html>
